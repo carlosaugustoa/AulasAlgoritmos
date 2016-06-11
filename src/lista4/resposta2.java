@@ -11,7 +11,7 @@ public class resposta2 {
     // Entrada de Dados
     System.out.print("Digite as Horas Trabalhadas : ");
         float horas = ent.nextFloat();
-    System.out.print("Valor da hora : ");
+    System.out.print("Valor da hora               : ");
         float valhor = ent.nextFloat();
     
     // Criando variáveis locais   
@@ -63,14 +63,13 @@ public class resposta2 {
     // Cálculo do Salário Liquido
     salliq = sala - totdesc;
     
-    System.out.println("Salário Bruto: (" + valhor + " * " + horas + "    : R$ " + sala);
-    System.out.println("");
-    System.out.println("(-)IR (" + perciren + "%)         : R$ " + iren); 
-    System.out.println("(-)INSS (10%)       : R$ " + inss);
-    System.out.println("FGTS (11%)          : R$ " + fgts);
-    System.out.println("(-)Sindicato (3%)   : R$ " + sindi);
-    System.out.println("Total de Descontos  : R$ " + totdesc);
-    System.out.println("Salário Liquido     : R$ " + sindi);
+    System.out.println("Salário Bruto (" + valhor + " * " + horas + "): R$ " + sala);
+    System.out.println("(-)IR(" + perciren + "%)                  : R$ " + iren); 
+    System.out.println("(-)INSS (10%)               : R$ " + inss);
+    System.out.println("(-)Sindicato (3%)           : R$ " + sindi);
+    System.out.println("FGTS (11%)                  : R$ " + fgts);
+    System.out.println("Total de Descontos          : R$ " + totdesc);
+    System.out.println("Salário Liquido             : R$ " + sindi);
    
    }
 }  

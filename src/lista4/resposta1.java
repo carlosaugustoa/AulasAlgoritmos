@@ -9,13 +9,16 @@ public class resposta1 {
         
     Scanner ent = new Scanner(System.in);        
     
+    // Entrada de dados
     System.out.print("Informe o Salário R$: ");
        float sala = ent.nextFloat();
-       
+    
+    // Definição das variáveis
        float perc = 0;
        float aumen = 0;
        float novs = 0;
-       
+    
+    // Cáculo dos Percentuais de aumento do Sálario
     if (sala <= 280) {
         perc=20;
         aumen=(sala*20)/100;
@@ -35,7 +38,9 @@ public class resposta1 {
         perc=5;
         aumen=(sala*5)/100;
         novs=sala+aumen;
-        }    
+        }
+    
+    // Mostrando Resultados
     System.out.println("O Salário era R$: " + sala + "\nteve um percentual de aumento de " + perc + "%" + "\naumentou R$: " + aumen + "\nFicando com o Salário de R$: " + novs);
     
             
