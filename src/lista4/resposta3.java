@@ -3,42 +3,45 @@ package lista4;
 import java.util.Scanner;
 
 public class resposta3 {
-    
-    public static void main(String[] args, String semana) { 
-        
+    public static void main(String [] args) { 
+           
     Scanner ent = new Scanner(System.in);        
     
     // Entrada de dados
     System.out.print("Digite em Número o dia da Semana : ");
        int dia = ent.nextInt();
     
-    // Usando if para mostrar dia da semana
+       String semana = "";
+       
+    // Usando if seleciona pela digitação, o dia da semana
     if (dia == 1){
-        semana = "Domingo";
+       semana = "Domingo";
     }
-    if (dia == 2 {
-        semana = "Segunda";
+    if (dia == 2){
+       semana = "Segunda";
     }
     if (dia == 3){
-        semana = "Terça";
+       semana = "Terça";
     }
-    if (dia == 4 {
-        semana = "Quarta";
+    if (dia == 4){
+       semana = "Quarta";
     }
     if (dia == 5){
-        semana = "Quinta";
+       semana = "Quinta";
     }
-    if (dia == 6 {
-        semana = "Sexta";
+    if (dia == 6){
+       semana = "Sexta";
     }
     if (dia == 7){
-        semana = "Sábado";
+       semana = "Sábado";
     }
     if (dia <1 || dia >7) {
-        System.out.println("Dia Invalido !");
-        System.exit();
+       System.out.println("Dia Invalido !");
+       System.exit(0);
     }
-        System.out.println("Dia da Semana " + semana);
+    
+       // Mostra a informação digitada
+       System.out.println(semana + " è o dia da Semana");
         
         
    }

@@ -15,9 +15,9 @@ public class resposta5 {
     //}
     
     System.out.print("nota n1: ");
-        float a = ent.nextInt();
+        int a = ent.nextInt();
     System.out.print("nota n2: ");
-        float b = ent.nextInt();
+        int b = ent.nextInt();
                           
         float media = (a+b)/2;
         
