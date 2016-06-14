@@ -1,8 +1,8 @@
-package extrutura_case;
+package ExtruturaDeRepeticaoCase;
 
 import java.util.Scanner;
 
-public class exemplo1 {
+public class Exemplo1 {
  
 public static void main(String[] args, String meses){
  
@@ -59,5 +59,4 @@ public static void main(String[] args, String meses){
 
 
     }
-}   
- 
+} 

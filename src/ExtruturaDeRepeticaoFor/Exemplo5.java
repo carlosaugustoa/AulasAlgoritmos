@@ -1,8 +1,8 @@
-package extrutura_for;
+package ExtruturaDeRepeticaoFor;
 
 import java.util.Scanner;
 
-public class exemplo5 {
+public class Exemplo5 {
     
     public static void main(String[] args) {  
 
@@ -30,3 +30,4 @@ public class exemplo5 {
     
     }
 }
+

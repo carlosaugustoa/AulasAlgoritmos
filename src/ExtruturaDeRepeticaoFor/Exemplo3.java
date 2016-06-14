@@ -1,8 +1,8 @@
-package extrutura_for;
+package ExtruturaDeRepeticaoFor;
 
 import java.util.Scanner;
 
-public class exemplo3 {
+public class Exemplo3 {
     
     public static void main(String[] args) {  
 

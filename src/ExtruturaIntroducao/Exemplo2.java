@@ -1,9 +1,9 @@
-package extrutura_introducao;
+package ExtruturaIntroducao;
 
 import java.util.Date;
 import java.util.Scanner;
 
-public class exemplo2 {
+public class Exemplo2 {
  
     
     public static void main(String[] args) {
@@ -101,4 +101,3 @@ public class exemplo2 {
     
     }
 }
-

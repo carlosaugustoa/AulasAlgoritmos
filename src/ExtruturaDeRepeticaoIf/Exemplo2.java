@@ -1,8 +1,8 @@
 
-package extrutura_if;
+package ExtruturaDeRepeticaoIf;
 import java.util.Scanner;
 
-public class exemplo2 {
+public class Exemplo2 {
 
     public static void main(String[] args) {
 

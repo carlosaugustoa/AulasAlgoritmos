@@ -1,10 +1,8 @@
-
-
-package extrutura_if;
+package ExtruturaDeRepeticaoIf;
 
 import java.util.Scanner;
 
-public class exemplo1 {
+public class Exemplo1 {
 
     public static void main(String[] args) {
 //        int a = 10;
@@ -75,4 +73,3 @@ public class exemplo1 {
     
     }
 }
-  

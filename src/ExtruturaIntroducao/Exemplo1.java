@@ -1,8 +1,8 @@
-package extrutura_introducao;
+package ExtruturaIntroducao;
 
 import java.util.Scanner;
 
-public class exemplo1 {
+public class Exemplo1 {
     public static void main(String[] args) {
         
         System.out.print("Olá mundo!!!");
