@@ -13,14 +13,19 @@ public class resposta9 {
     // Entrada de dados   
     System.out.print("Digite um Número Inteiro: ");
         int num = ent.nextInt();
-        
+    
+    // Sair se número menor que zero
+    if (num >= 1000){
+        System.out.println("Digite um número menor que 1000 !!!");
+        System.exit(0);
+    }   
         //Definindo varáveis
         int cen = 0;
         int dez = 0;
         int uni = 0;
         
         //Definindo centena, dezenas e unidades
-        int cent = (num / 100);
+        int cent = (int)(num / 100);
         int deze = (num % 100) / 10;  
         int unid = ((num % 100) % 10); 
         
