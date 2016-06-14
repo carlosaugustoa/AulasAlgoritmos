@@ -41,7 +41,8 @@ public class resposta1 {
     }
     
         // Mostrando Resultados
-        System.out.println("O Salário era R$: " + sala + "\nteve um percentual de aumento de " + perc + "%" + "\naumentou R$: " + aumen + "\nFicando com o Salário de R$: " + novs);
+        System.out.println("O Salário era R$: " + sala + "\nteve um percentual de aumento de " + perc + "%" + ""
+                + "         \naumentou R$: " + aumen + "\nFicando com o Salário de R$: " + novs);
     
    }
 }  

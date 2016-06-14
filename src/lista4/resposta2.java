@@ -63,13 +63,13 @@ public class resposta2 {
         // Cálculo do Salário Liquido
         salliq = sala - totdesc;
     
-        System.out.println("Salário Bruto (" + valhor + " * " + horas + "): R$ " + Math.ceil(sala));
-        System.out.println("(-)IR(" + perciren + "%)                  : R$ " + iren); 
-        System.out.println("(-)INSS (10%)               : R$ " + Math.ceil(inss));
-        System.out.println("(-)Sindicato (3%)           : R$ " + Math.ceil(sindi));
-        System.out.println("FGTS (11%)                  : R$ " + Math.ceil(fgts));
-        System.out.println("Total de Descontos          : R$ " + Math.ceil(totdesc));
-        System.out.println("Salário Liquido             : R$ " + Math.ceil(salliq));
+        System.out.println("Salário Bruto (" + valhor + " * " + horas + ").: R$ " + Math.ceil(sala));
+        System.out.println("(-)IR(" + perciren + "%).................. : R$ " + iren); 
+        System.out.println("(-)INSS (10%).............. : R$ " + Math.ceil(inss));
+        System.out.println("(-)Sindicato (3%).......... : R$ " + Math.ceil(sindi));
+        System.out.println("FGTS (11%)................. : R$ " + Math.ceil(fgts));
+        System.out.println("Total de Descontos......... : R$ " + Math.ceil(totdesc));
+        System.out.println("Salário Liquido............ : R$ " + Math.ceil(salliq));
    
    }
 }  
