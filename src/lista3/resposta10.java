@@ -9,18 +9,18 @@ public class resposta10 {
 
      Scanner ent = new Scanner(System.in);
  
-     System.out.print("Informe o TURNO que você estuda: ");
+     System.out.print("Opções:\nM-Matutino\nV-Vespertino\nN-Noturno\nOpções: ");
      String turno;
         turno = ent.next();
      
       switch(turno){
-        case "N": case "n" : case "NOTURNO" : case "noturno" :
+        case "N": case "n" :
             System.out.println("Boa Noite !");
             break;
-        case "M": case "m" : case "MATUTINO" : case "matutino" :
+        case "M": case "m" :
             System.out.println("Bom Dia !");
             break;
-        case "T": case "t" : case "VESPERTINO" : case "vespertino" :
+        case "V": case "v" :
             System.out.println("Boa Tarde !");
             break;   
         default: 
