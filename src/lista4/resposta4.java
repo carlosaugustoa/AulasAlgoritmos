@@ -13,7 +13,7 @@ public class resposta4 {
         Float n1 = ent.nextFloat();
         
     // Se Nota 1 for maior que 10 sai
-    if (n1 > 10){
+    if (n1 > 10 || n1 < 0){
         System.out.println("Número Invalido !!!");
         System.exit(0);
     }
@@ -23,7 +23,7 @@ public class resposta4 {
         Float n2 = ent.nextFloat();
     
     // Se Nota 2 for maior que 10 sai
-    if (n2 > 10){
+    if (n2 > 10 || n2 < 0){
         System.out.println("Número Invalido !!!");
         System.exit(0);
     }

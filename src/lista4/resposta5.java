@@ -23,24 +23,29 @@ public class resposta5 {
        int a = (ladob - ladoc);
        int b = (ladoa - ladoc);
        int c = (ladoa - ladob);
+       
        int d = (ladob + ladoc);
        int e = (ladoa + ladoc);
        int f = (ladoa + ladob);
        int aux = 0;
        
-    //Para saber se os lados são de um Triãngulo
+    //Para saber se os lados forma um Triãngulo
     if ((a < ladoa) && (ladoa < d)) { 
-    }   else {
-            aux = 1;
-        }
+        aux = 1;
+    } 
     if ((b < ladob) && (ladob < e)) {
-    }   else {
-            aux = 1;
-        }
+        aux = 1;
+    }
     if ((c < ladoc) && (ladoc < f)) {
-    }   else {
-            aux = 1;
+        aux = 1;
         }
+    
+// verificar depois
+    
+    if (aux == 0){
+        System.out.println("Não é um triângulo !!!");
+        System.exit(0);
+    }
             
     //Verifica e mostra se o Triângulo é Equilátero, Isóceles ou Escaleno
     if ((ladoa == ladob) && (ladob == ladoc)){
