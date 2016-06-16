@@ -14,8 +14,9 @@ public class Exemplo1 {
     while (!resposta.equalsIgnoreCase("sim")){
         System.out.print("Eu sou bonito? ");
         resposta = ent.next();
-        tentativa = tentativa + 1;
+        tentativa++;
     }
-    System.out.println("Parabéns tentou negar minha belez " + tentativa + "vezes !!!");
+    System.out.println("Parabéns !!! Mais você tentou negar minha beleza " +
+            (tentativa-1) + " vezes !!!");
   }
 }
