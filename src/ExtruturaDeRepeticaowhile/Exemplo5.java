@@ -105,13 +105,13 @@ public class Exemplo5 {
             
             System.out.print(soma + "  " + perc1 + "  " + perc2 + "  " + perc3);
             
-            if (perc1 < 50 && perc1) {
+            if (perc1 < 50 && perc1 > perc2 && perc1 > perc3) {
                 System.out.println("O Candidato 1 vai para o Segundo turno");
             }
-            if (perc2 > 50) {
+            if (perc2 < 50 && perc2 > perc1 && perc2 > perc3) {
                 System.out.println("O Candidato 2 vai para o Segundo turno");
             }
-            if (perc3 > 50) {
+            if (perc3 < 50 && perc3 > perc1 && perc3 > perc2) {
                 System.out.println("O Candidato 3 vai para o Segundo turno");
             }
             
