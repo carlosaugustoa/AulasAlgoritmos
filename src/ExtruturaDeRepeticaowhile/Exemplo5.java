@@ -20,7 +20,7 @@ public class Exemplo5 {
             String vencedor = "";
             String perdedor = "";
             int perc = 0;
-                
+                                      
         while (opcao !=99999){
         
             votovalido = 0;
@@ -103,26 +103,37 @@ public class Exemplo5 {
             float perc2 = (cand2 / soma) * 100;
             float perc3 = (cand3 / soma) * 100;
             
-            System.out.print(soma + "  " + perc1 + "  " + perc2 + "  " + perc3);
+            System.out.println(soma + " " + perc1 + " " + perc2 + " " + perc3);
             
-            if (perc1 < 50 && perc1 > perc2 && perc1 > perc3) {
-                System.out.println("O Candidato 1 vai para o Segundo turno");
+            if (perc1 < 50 && perc2 < 50 && perc3 < 50) {
+            
+                    if (vencedor == "Cand1dato - 1" && perdedor == "Candidato - 2"){
+                    System.out.println("O Candidato 1 vai para o Segundo turno");
+                    System.out.println("O Candidato 3 vai para o Segundo turno");
             }
-            if (perc2 < 50 && perc2 > perc1 && perc2 > perc3) {
-                System.out.println("O Candidato 2 vai para o Segundo turno");
+                    if (vencedor == "Candidato - 1" && perdedor == "Candidato - 3"){
+                    System.out.println("O Candidato 1 vai para o Segundo turno");
+                    System.out.println("O Candidato 2 vai para o Segundo turno");
             }
-            if (perc3 < 50 && perc3 > perc1 && perc3 > perc2) {
-                System.out.println("O Candidato 3 vai para o Segundo turno");
+                    if (vencedor == "Candidato - 2" && perdedor == "Candidato - 1"){
+                    System.out.println("O Candidato 2 vai para o Segundo turno");
+                    System.out.println("O Candidato 3 vai para o Segundo turno");
             }
-            
-            
-            
-            
-            
-            
-            
-            
-            
+                    if (vencedor == "Candidato - 2" && perdedor == "Candidato - 3"){
+                    System.out.println("O Candidato 2 vai para o Segundo turno");
+                    System.out.println("O Candidato 1 vai para o Segundo turno");
+            }
+                    if (vencedor == "Candidato - 3" && perdedor == "Candidato - 2"){
+                    System.out.println("O Candidato 3 vai para o Segundo turno");
+                    System.out.println("O Candidato 1 vai para o Segundo turno");
+            } 
+                    if (vencedor == "Candidato - 3" && perdedor == "Candidato - 1"){
+                    System.out.println("O Candidato 3 vai para o Segundo turno");
+                    System.out.println("O Candidato 2 vai para o Segundo turno");
+            }
+            }    
+                
+           
             
             
             
