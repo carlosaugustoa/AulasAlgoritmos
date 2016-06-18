@@ -32,33 +32,30 @@ public class Exemplo5 {
             if (opcao == 1){
                 cand1++;
                 votovalido = 1;
-            }
                 if (cand1 > maivoto){
                     maivoto = cand1;
-                }
-                if (cand1 < menvoto){
+                }   else if (cand1 < menvoto){
                     menvoto = cand1; 
-                }
+                    }
+            }
             if (opcao == 2){
                 cand2++;
                 votovalido = 1;
-            }
                 if (cand2 > maivoto){
                     maivoto = cand2;
-                }
-                if (cand2 < menvoto){
+                }   else if (cand2 < menvoto){
                     menvoto = cand2; 
-                }
+                    }
+            }
             if (opcao == 3){
                 cand3++;
                 votovalido = 1;
-            }
                 if (cand3 > maivoto){
                     maivoto = cand3;
-                }
-                if (cand3 < menvoto){
+                }   else if (cand3 < menvoto){
                     menvoto = cand3;
                 }
+            }
             if (opcao == 0){
                 nulo++;
                 votovalido = 1;
@@ -76,7 +73,7 @@ public class Exemplo5 {
             if (maivoto == cand3) {
                 vencedor = "Candidato - 3";
             }
-            if (menvoto == cand1){
+            if (menvoto == cand1) { 
                 perdedor = "Candidato - 1";
             }
             if (menvoto == cand2) {
@@ -98,40 +95,42 @@ public class Exemplo5 {
            
             System.out.println("\nO Candidato com mais Votos é " + vencedor + "\ne o com menos Voto é : " + perdedor);
             
-            float soma = cand1 + cand2 + cand3;
-            float perc1 = (cand1 / soma) * 100;
-            float perc2 = (cand2 / soma) * 100;
-            float perc3 = (cand3 / soma) * 100;
+                float soma = cand1 + cand2 + cand3;
+                float perc1 = (cand1 / soma) * 100;
+                float perc2 = (cand2 / soma) * 100;
+                float perc3 = (cand3 / soma) * 100;
             
             System.out.println(soma + " " + perc1 + " " + perc2 + " " + perc3);
             
-            if (perc1 < 50 && perc2 < 50 && perc3 < 50) {
+                if (perc1 >= 50 && perc2 >= 50 && perc3 >= 50) {
+                    System.out.println("So houve o primeiro turno !!!");
+                    System.exit(0);
+                }      
+                if (vencedor == "Cand1dato - 1" && perdedor == "Candidato - 2"){
+                    System.out.println("O Candidato 1 vai para o Segundo turno");
+                    System.out.println("O Candidato 3 vai para o Segundo turno");
+                }
+                if (vencedor == "Candidato - 1" && perdedor == "Candidato - 3"){
+                    System.out.println("O Candidato 1 vai para o Segundo turno");
+                    System.out.println("O Candidato 2 vai para o Segundo turno");
+                }
+                if (vencedor == "Candidato - 2" && perdedor == "Candidato - 1"){
+                    System.out.println("O Candidato 2 vai para o Segundo turno");
+                    System.out.println("O Candidato 3 vai para o Segundo turno");
+                }
+                if (vencedor == "Candidato - 2" && perdedor == "Candidato - 3"){
+                    System.out.println("O Candidato 2 vai para o Segundo turno");
+                    System.out.println("O Candidato 1 vai para o Segundo turno");
+                }
+                if (vencedor == "Candidato - 3" && perdedor == "Candidato - 2"){
+                    System.out.println("O Candidato 3 vai para o Segundo turno");
+                    System.out.println("O Candidato 1 vai para o Segundo turno");
+                    } 
+                if (vencedor == "Candidato - 3" && perdedor == "Candidato - 1"){
+                    System.out.println("O Candidato 3 vai para o Segundo turno");
+                    System.out.println("O Candidato 2 vai para o Segundo turno");
+                }
             
-                    if (vencedor == "Cand1dato - 1" && perdedor == "Candidato - 2"){
-                    System.out.println("O Candidato 1 vai para o Segundo turno");
-                    System.out.println("O Candidato 3 vai para o Segundo turno");
-            }
-                    if (vencedor == "Candidato - 1" && perdedor == "Candidato - 3"){
-                    System.out.println("O Candidato 1 vai para o Segundo turno");
-                    System.out.println("O Candidato 2 vai para o Segundo turno");
-            }
-                    if (vencedor == "Candidato - 2" && perdedor == "Candidato - 1"){
-                    System.out.println("O Candidato 2 vai para o Segundo turno");
-                    System.out.println("O Candidato 3 vai para o Segundo turno");
-            }
-                    if (vencedor == "Candidato - 2" && perdedor == "Candidato - 3"){
-                    System.out.println("O Candidato 2 vai para o Segundo turno");
-                    System.out.println("O Candidato 1 vai para o Segundo turno");
-            }
-                    if (vencedor == "Candidato - 3" && perdedor == "Candidato - 2"){
-                    System.out.println("O Candidato 3 vai para o Segundo turno");
-                    System.out.println("O Candidato 1 vai para o Segundo turno");
-            } 
-                    if (vencedor == "Candidato - 3" && perdedor == "Candidato - 1"){
-                    System.out.println("O Candidato 3 vai para o Segundo turno");
-                    System.out.println("O Candidato 2 vai para o Segundo turno");
-            }
-            }    
                 
            
             
