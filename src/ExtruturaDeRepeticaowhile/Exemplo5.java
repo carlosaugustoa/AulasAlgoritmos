@@ -7,186 +7,110 @@ public class Exemplo5 {
     public static void main(String[] args) {
 
         Scanner ent = new Scanner(System.in);
-    
-            int opcao = 0;
-            int cand1 = 0;
-            int cand2 = 0;
-            int cand3 = 0;
-            int branco = 0;
-            int nulo = 0;
-            int votovalido = 0;
-            int maivoto = 0;
-            int menvoto = 0;
-            String vencedor = "";
-            String perdedor = "";
-            int perc = 0;
-                                      
-        while (opcao !=99999){
-        
-            votovalido = 0;
-        
-            //Entrada de dados
-            System.out.print("Candidato 1 - Digite <1>:\nCandidato 2 - Digite <2>:\nCandidato 3 - Digite <3>:\nVoto NULO   - Digite <0>:\nVoto BRANCO - Digite <9>: \n\nDIGITE SUA OPCAO: ");
-            opcao = ent.nextInt();
-            
-            if (opcao == 1){
-                cand1++;
-                votovalido = 1;
-                if (cand1 > maivoto){
-                    maivoto = cand1;
-                }   else if (cand1 < menvoto){
-                    menvoto = cand1; 
-                    }
-            }
-            if (opcao == 2){
-                cand2++;
-                votovalido = 1;
-                if (cand2 > maivoto){
-                    maivoto = cand2;
-                }   else if (cand2 < menvoto){
-                    menvoto = cand2; 
-                    }
-            }
-            if (opcao == 3){
-                cand3++;
-                votovalido = 1;
-                if (cand3 > maivoto){
-                    maivoto = cand3;
-                }   else if (cand3 < menvoto){
-                    menvoto = cand3;
-                }
-            }
-            if (opcao == 0){
-                nulo++;
-                votovalido = 1;
-            }
-            if (opcao == 9){
-                branco++;
-                votovalido = 1;
-            }
-            if (maivoto == cand1){
-                vencedor = "Candidato - 1";
-            }
-            if (maivoto == cand2) {
-                vencedor = "Candidato - 2";
-            }
-            if (maivoto == cand3) {
-                vencedor = "Candidato - 3";
-            }
-            if (menvoto == cand1) { 
-                perdedor = "Candidato - 1";
-            }
-            if (menvoto == cand2) {
-                perdedor = "Candidato - 2";
-            }
-            if (menvoto == cand3) {
-                perdedor = "Candidato - 3";
-            }
-            
-            if (votovalido == 0){
-            System.out.println("\n\nVoto Invalido !!! Digite Novamente !!!\n\n");
-            }   else {
-                System.out.println("\n\nVoto Validado !!!\n\n");
-                }
-        }
-            System.out.println("\nCandidato 1 teve: " + cand1 + " votos\nCandidato 2 teve: " + cand2
-                + " votos\nCandidato 3 teve: " + cand3 + " votos\nVotos NULO  teve: " + nulo + 
-                " votos\nVoto BRANCO teve: " + branco + " votos");
            
-            System.out.println("\nO Candidato com mais Votos é " + vencedor + "\ne o com menos Voto é : " + perdedor);
+            // Variáveis Auxiliares
+            int opc = 0;
+            int mai = 0; int men = 0; int mei = 0; 
+            int nul = 0; int bra = 0;
+            int c1 = 0; int c2 = 0; int c3 = 0;
+            String venc = ""; String perd = ""; String meio = "";                          
+        
+        // Entrada de Votos Eleição     
+        while (opc != 99999){
+            System.out.print("Candidato 1 - Digite <1>:\nCandidato 2 - Digite <2>:"
+                    + "\nCandidato 3 - Digite <3>:\nVoto NULO   - Digite <0>:\nVoto BRANCO "
+                    + "- Digite <9>: \n\nDIGITE SUA OPCAO: ");
+                opc = ent.nextInt();
             
-                float soma = cand1 + cand2 + cand3;
-                float perc1 = (cand1 / soma) * 100;
-                float perc2 = (cand2 / soma) * 100;
-                float perc3 = (cand3 / soma) * 100;
+            switch(opc){
+                case 1 :
+                    c1++;
+                    break;
+                case 2 :
+                    c2++;
+                    break;
+                case 3 :
+                    c3++;
+                    break;
+                case 0 :
+                    nul++; 
+                case 9 :
+                    bra++;
+                case 99999 :
+                    break;
+                default: 
+                    System.out.println("Voto inválido !!!");
+            } 
+        }   
+            // Definindo Maior e Menor Voto
+            if (c1 > c2) {mai = c1; men = c2;}
+                else {mai = c2; men = c1;}
+            if (c3 > mai) {mai = c3;}
+                else if (c3 < men) {men = c3;}
             
-            System.out.println(soma + " " + perc1 + " " + perc2 + " " + perc3);
+            // Gravando em strings cada candidato
+            if (c1 == mai && c2 == men) { mei = c3; venc = "Candidato - 1"; meio = "Candidato - 3"; perd = "Candidato - 2";}
+            if (c1 == mai && c3 == men) { mei = c2; venc = "Candidato - 1"; meio = "Candidato - 2"; perd = "Candidato - 3";}
+            if (c2 == mai && c1 == men) { mei = c3; venc = "Candidato - 2"; meio = "Candidato - 3"; perd = "Candidato - 1";}
+            if (c2 == mai && c3 == men) { mei = c1; venc = "Candidato - 2"; meio = "Candidato - 1"; perd = "Candidato - 3";}
+            if (c3 == mai && c1 == men) { mei = c2; venc = "Candidato - 3"; meio = "Candidato - 2"; perd = "Candidato - 1";}
+            if (c3 == mai && c2 == men) { mei = c1; venc = "Candidato - 3"; meio = "Candidato - 1"; perd = "Candidato - 2";}
             
-                if (perc1 >= 50 && perc2 >= 50 && perc3 >= 50) {
-                    System.out.println("So houve o primeiro turno !!!");
-                    System.exit(0);
-                }      
-                if (vencedor == "Cand1dato - 1" && perdedor == "Candidato - 2"){
-                    System.out.println("O Candidato 1 vai para o Segundo turno");
-                    System.out.println("O Candidato 3 vai para o Segundo turno");
-                }
-                if (vencedor == "Candidato - 1" && perdedor == "Candidato - 3"){
-                    System.out.println("O Candidato 1 vai para o Segundo turno");
-                    System.out.println("O Candidato 2 vai para o Segundo turno");
-                }
-                if (vencedor == "Candidato - 2" && perdedor == "Candidato - 1"){
-                    System.out.println("O Candidato 2 vai para o Segundo turno");
-                    System.out.println("O Candidato 3 vai para o Segundo turno");
-                }
-                if (vencedor == "Candidato - 2" && perdedor == "Candidato - 3"){
-                    System.out.println("O Candidato 2 vai para o Segundo turno");
-                    System.out.println("O Candidato 1 vai para o Segundo turno");
-                }
-                if (vencedor == "Candidato - 3" && perdedor == "Candidato - 2"){
-                    System.out.println("O Candidato 3 vai para o Segundo turno");
-                    System.out.println("O Candidato 1 vai para o Segundo turno");
-                    } 
-                if (vencedor == "Candidato - 3" && perdedor == "Candidato - 1"){
-                    System.out.println("O Candidato 3 vai para o Segundo turno");
-                    System.out.println("O Candidato 2 vai para o Segundo turno");
-                }
+            // Resultado dos Votos
+            System.out.println("\nCandidato 1 teve: " + c1 + " votos\nCandidato 2 teve: " + c2 + " votos\nCandidato 3 teve: "
+                    + c3 + " votos\nVotos NULO  teve: " + nul + " votos\nVoto BRANCO teve: " + bra + " votos");
+            System.out.println("\nO Candidato com mais Votos é " + venc + "\ne com menos Votos é : " + perd);
             
+                // Cálculo de percentuais
+                float soma = c1 + c2 + c3;
+                float pc1 = (c1 / soma) * 100;
+                float pc2 = (c2 / soma) * 100;
+                float pc3 = (c3 / soma) * 100;
+            
+            // Definição do Segundo Turno    
+            if (pc1 < 50 && pc2 < 50 && pc3 < 50) {System.out.print("\nPara o Segundo Turno: \n" + venc + "\n" + meio + "\n");}    
+            if (pc1 > 50 || pc2 > 50 || pc3 > 50) {System.out.println("\nO Candidato vencedor é: " + venc);System.exit(0);} 
+            
+                // Variáveis auxiliares
+                opc = 0; c1 = 0; c2 = 0; nul = 0; bra = 0;
+            
+            // Entrada de dados do Segundo Turno
+            while (opc != 99999){
+                System.out.print("\nDIGITE SUA OPCAO PARA O SEGUNDO TURNO\n" + venc + " - Digite <1>:\n" + meio + " - Digite <2>:"
+                    + "\nVoto NULO   - Digite <0>:\nVoto BRANCO - Digite <9>: \n\nDIGITE SUA OPCAO: ");
+                    opc = ent.nextInt();
                 
-           
+                switch(opc){
+                    case 1 :
+                        c1++;
+                        break;
+                    case 2 :
+                        c2++;
+                        break;
+                    case 0 :
+                        nul++; 
+                    case 9 :
+                        bra++;
+                    case 99999 :
+                        break;
+                    default: 
+                        System.out.println("Voto inválido !!!");
+                } 
+                System.out.println("\n" + venc + " teve: " + c1 + " votos\n" + meio + " teve: " + c2
+                        + " votos\nVotos NULO    teve: " + nul + " votos\nVoto BRANCO   teve: " + bra + " votos");
+                // Cálculo dos Votos
+                if (c1 > c2) {mai = c1; men = c2;}
+                    else {mai = c2; men = c1;}
+                        // Variáveis auxiliares
+                        String venc1 = "";
+                        String perd1 = "";
+                // Definindo Vencedor    
+                if (c1 == mai && c2 == men) { venc1 = venc; perd = meio;}
+                if (c2 == mai && c1 == men) { venc1 = meio; perd = venc;}
+                // Resultado Final
+                System.out.println("\nO vencedor é o: " + venc1 + "\n");
+            }
             
-            
-            
-            
-//           Scanner entrada = new Scanner(System.in);
-//           
-//           int a=0; b=0; c=0; x=0; y=0;
-//           String sair = "nao";
-//           
-//           do {
-//               
-//               System.out.print(
-//                      "----Votação----\n"
-//                    + "1 - Candidato 1\n"          
-//                    + "2 - Candidato 2\n"
-//                    + "3 - Candidato 3\n"
-//                    + "0 - Branco     \n"
-//                    + "---------------\n "
-//                    + "Voto: ");
-//                v = entrada.nextInt();
-//                switch(v) {              
-//                    case 1 :
-//                        a++;
-//                        break;
-//                    case 2 :
-//                        b++;
-//                        break;
-//                    case 3 ;
-//                        c++;
-//                        break;
-//                    case 0 :
-//                        x++;
-//                        break;
-//                    default :
-//                        y++;
-//                }
-//                System.out.print(
-//                    "--------------\n"
-//                    + "SAIR? ");
-//                sair = entrada.next();                                                   
-//                              
-//            } while (!sair.equalsIgnoreCase("sim"));
-//            System.out.print{
-//                      "----Resultado--\n"
-//                    + a + " - Candidato 1\n"          
-//                    + b + " - Candidato 2\n"
-//                    + c + " - Candidato 3\n"
-//                    + x + " - Branco\n"
-//                    + y + " - Nulo\n"
-//                    +     "---------------\n ");
-//            }
-//            }   
-            
-             
     }
 }
 

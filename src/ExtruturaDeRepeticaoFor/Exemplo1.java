@@ -12,7 +12,7 @@ public class Exemplo1 {
 //   i++  i+=2 i**3 i-=2
         
         
-        System.out.println( i );
+        System.out.println(i);
     }    
  
     
