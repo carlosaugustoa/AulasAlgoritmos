@@ -68,25 +68,29 @@ public class Exemplo2 {
     
 // Exemplo 2 Professor    
 
-        String nome[] = new String[2];
-        int nota[][] = new int[2][3];
+        String nomes[] = new String[2];
+        int notas[][] = new int[2][3];
     
-    for (int i = 0; i <nome.length; i++){
+    for (int i = 0; i <nomes.length; i++){
         
         System.out.print("Nome " + (i+1) + ": ");
-        nome[i] = ent.next();
+        nomes[i] = ent.next();
     
         for (int j = 0; j < 3; j++) {
-            System.out.print("Notas " + (j+1) + " de " + nome[i] + ": ");
-            nota[i][j] = ent.nextInt();
+            System.out.print("Notas " + (j+1) + " de " + nomes[i] + ": ");
+            notas[i][j] = ent.nextInt();
         }
     }
     
-    for (int[] notas : nota){
+    for (String nome : nomes){
+        
+        System.out.print(nome);
+        
+        for (int[] nota : notas){
             
-          System.out.print(nota);
-    }    
-
+            System.out.print(nota);
+        }    
+   }   
 
 //        nome[i] = ent.next();
 //    
