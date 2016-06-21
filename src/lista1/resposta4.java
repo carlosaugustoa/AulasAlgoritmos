@@ -1,6 +1,5 @@
-
-
 package lista1;
+
 import java.util.Scanner;
 
 public class resposta4 {
