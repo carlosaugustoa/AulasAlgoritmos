@@ -18,10 +18,10 @@ public class resposta5 {
         System.out.print("Digite um numero: ");
         int n1 = ent.nextInt();
         
-        if (n1 > 0) 
-            System.out.println( "P" );
-            else 
-                System.out.println( "N" ); 
+
+        
+        
+        
         
     }
 }
