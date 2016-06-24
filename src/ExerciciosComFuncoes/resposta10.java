@@ -24,21 +24,54 @@
 package ExerciciosComFuncoes;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class resposta10 {
 
-	public static void main(String[] args) {
-
-		//instância um objeto da classe Random usando o construtor padrão
-		Random gerador = new Random();
-	    
-		//imprime sequência de 10 números inteiros aleatórios
-	    for (int i = 0; i < 10; i++) {
-	    	System.out.println(gerador.nextInt());
-	 	}
-            
-    }
-}
+    public static void main(String[] args) {
+	
+        Scanner ent = new Scanner(System.in);
         
+            int randon1 = 0;
+            int randon2 = 0;
+            float joga = 0;
+            int cont = 0;
+            
+        while (randon1 != 0 && randon2 != 0 ) {       
+        
+            cont++;
+        
+            System.out.println("Jogue os Dados !!!");
+            int jogo = 0;
+        
+            int random1 = 1 + (int) (Math.random() * 6);
+            System.out.println(random1);
+        
+            int random2 = 1 + (int) (Math.random() * 6);
+            System.out.println(random2);
     
+            float soma = (randon1 + randon2);
+        
+            if (cont == 1 ){
+                if (soma == 7 || soma == 11) {
+                System.out.println(soma + "Vencedor");
+                break;
+                }
+            }
+            if (cont == 1 ){
+                if (soma == 2 || soma == 3 || soma == 12) {
+                System.out.println(soma + "Craps você Perdeu !!!");
+                break;
+                }    
+            }
+            
+            if (soma == 4 || soma == 5 || soma == 6 || soma == 8 || soma == 9 || soma == 10) {
+                joga = joga + soma;
+                System.out.println("Você ganhou : " + soma + " pontos ficando com total de : " + joga !!!");
+            }         
+            
+    
+        }
+    }        
+}    
 
